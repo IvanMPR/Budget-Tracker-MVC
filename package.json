@@ -2,7 +2,6 @@
   "name": "mvc-budget-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "controller.js",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
