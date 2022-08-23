@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// utility classes
+.container {
+  max-width: 120rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+// ------------------------- //
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 3rem 0;
+  text-align: center;
+  color: #333;
+}
+
+input {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  padding: 0.5rem;
+}
+
+select {
+  padding: 0.6rem;
+  font-size: 1.6rem;
+}
+
+option[value='minus'] {
+  color: lightcoral;
+}
+option[value='plus'] {
+  color: lightgreen;
+}
+
+i {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+i:hover {
+  color: lightcoral;
+}
+
+.edit {
+  margin-left: 1.5rem;
+}
+
+.red__edit--icon {
+  color: lightcoral;
+}
+// amounts__expense--p
+.amounts {
+  //   background-color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__current {
+    background-color: lightgrey;
+    margin-bottom: 1rem;
+
+    &--p {
+      font-size: 3rem;
+    }
+  }
+
+  &__divs {
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    &--p {
+      font-size: 2.2rem;
+    }
+
+    &--s {
+      font-size: 1.2rem;
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
+
+  &__income,
+  &__expense {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+  }
+
+  &__income {
+    background-color: lightgreen;
+    &--p {
+      margin-left: auto;
+      padding-right: 2.5rem;
+    }
+  }
+
+  &__expense {
+    background-color: lightcoral;
+
+    &--p {
+      margin-left: auto;
+    }
+  }
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 60rem;
+  margin: 2rem auto;
+
+  &__submit {
+    position: relative;
+    margin-left: 4rem;
+
+    &--btn,
+    &--edit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0.65rem;
+      cursor: pointer;
+      width: 10rem;
+    }
+  }
+}
+
+.transactions {
+  margin: 5rem auto;
+  width: 100%;
+  min-height: 5rem;
+  //   background-color: blanchedalmond;
+  display: flex;
+
+  &__incomes,
+  &__expenses {
+    width: 100%;
+    //  background-color: #f4f44f;
+    min-height: 3rem;
+    margin: 2rem;
+
+    &--subtitle {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__incomes {
+    padding: 1rem;
+    //  background-color: #f4f4f4;
+    &--ul {
+      margin-top: 0.5rem;
+    }
+    &--li {
+      // background-color: blueviolet;
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding: 0.25rem 0;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+    &--li:nth-child(odd) {
+      background-color: #f4f4f4;
+    }
+    &--p {
+      font-size: 1.6rem;
+      padding: 0 0.5rem;
+    }
+
+    &--subtitle {
+      color: lightgreen;
+      font-weight: bold;
+    }
+  }
+  &__expenses {
+    padding: 1rem;
+    //  background-color: #f4f4f4;
+
+    &--ul {
+      margin-top: 0.5rem;
+    }
+    &--li {
+      // background-color: blueviolet;
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding: 0.25rem 0;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+
+    &--li:nth-child(odd) {
+      background-color: #f4f4f4;
+    }
+
+    &--p {
+      font-size: 1.6rem;
+      padding: 0 0.5rem;
+    }
+
+    &--subtitle {
+      color: lightcoral;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .amounts {
+    &__income,
+    &__expense {
+      width: 70%;
+    }
+  }
+
+  .inputs {
+    flex-direction: column;
+    &__submit {
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+  }
+
+  .inputs > * {
+    margin-bottom: 1.5rem;
+  }
+
+  .transactions {
+    flex-direction: column;
+  }
+}
